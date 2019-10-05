@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body header {
+  width: 100%;
+  height: 850px;
+  position: relative;
+}
+body header .carousel {
+  width: 100%;
+  height: 850px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body header .carousel-inner {
+  height: inherit;
+}
+body header .carousel-inner .carousel-item {
+  width: 100%;
+  height: inherit;
+  background: url("../image/header/bg.jpg");
+}
+body header .carousel-inner .carousel-item .carousel-gradient {
+  width: 100%;
+  height: inherit;
+  background: linear-gradient(45deg, rgba(89, 89, 89, 0.4), rgba(89, 89, 89, 0.4));
+}
+body header .header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+}
+body header .header-top .header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  height: inherit;
+  z-index: 1;
+}
+body header .header-top .header-logo img {
+  width: 20%;
+  height: 60%;
+}
+body header .header-top .header-logo h2 {
+  font-size: 34px;
+  color: #fff;
+}
+body header .header-top .header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  height: inherit;
+  z-index: 1;
+}
+body header .header-top .header-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+body header .header-top .header-menu ul .menu-item {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 15px;
+}
