@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+@mixin header-title($size) {
+  font-size: $size;
+  color: #fff;
+}
+
 
 * {
   margin: 0;
@@ -17,6 +22,7 @@ body {
     width: 100%;
     height: 850px;
     position: relative;
+
     .carousel {
       width: 100%;
       height: 850px;
@@ -35,7 +41,7 @@ body {
           .carousel-gradient {
             width: 100%;
             height: inherit;
-            background: linear-gradient(45deg, rgba(89, 89, 89, 0.4), rgba(89, 89, 89, 0.4));
+            background-color: rgba(33, 33, 33, 0.8);
           }
         }
       }
@@ -44,43 +50,107 @@ body {
     .header-top {
       @include defaultDisplay;
       justify-content: space-between;
-      width: 80%;
+      width: 70%;
       height: 80px;
       margin: 0 auto;
-        .header-logo {
+
+      .header-logo {
         @include defaultDisplay;
+        width: 25%;
+        height: inherit;
+        z-index: 1;
+
+        img {
           width: 20%;
-          height: inherit;
-          z-index: 1;
-            img {
-              width: 20%;
-              height: 60%;
-            }
-            h2 {
-              font-size: 34px;
-              color: #fff;
-            }
+          height: 60%;
         }
-        .header-menu {
+
+        h2 {
+          font-size: 34px;
+          color: #fff;
+        }
+      }
+
+      .header-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65%;
+        height: inherit;
+        z-index: 1;
+
+        ul {
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
-          width: 70%;
-          height: inherit;
-          z-index: 1;
-            ul {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              list-style-type: none;
-                .menu-item {
-                  color: #fff;
-                  font-size: 14px;
-                  margin: 0 15px;
-                }
+          list-style-type: none;
+
+          .menu-item {
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 20px 10px;
+
+            &:hover {
+              color: #C7B299;
             }
+          }
+
+          .menu-item--active {
+            color: #C7B299;
+            padding: 20px 10px;
+          }
         }
+      }
     }
 
+    .header-container {
+      @include defaultDisplay;
+      flex-direction: column;
+      width: 70%;
+      height: 300px;
+      margin: 100px auto;
+      padding: 100px 0;
+
+      .container-title {
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+
+        h2 {
+          @include header-title(35px);
+        }
+
+        h1 {
+          @include header-title(54px);
+          font-weight: bold;
+        }
+
+        p {
+          @include header-title(16px);
+        }
+      }
+
+      .container-btn {
+        @include defaultDisplay;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+        margin-top: 50px;
+
+        #btn-started {
+          width: 170px;
+          height: 55px;
+          font-size: 14px;
+          background-color: #998675;
+          border: none;
+          border-bottom: 2px solid #736357;
+          border-radius: 5px;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
   }
+
 }
