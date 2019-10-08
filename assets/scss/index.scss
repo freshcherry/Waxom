@@ -240,7 +240,7 @@ body {
 
     .boxes {
       width: 100%;
-      background-color: #3D2A22;
+      background: linear-gradient(90deg, #1E1412, #553021);
       padding: 30px 0;
       margin-top: -3px;
       position: absolute;
@@ -279,7 +279,7 @@ body {
             @include defaultDisplay;
 
             .bigBtn {
-             @include button
+              @include button
             }
           }
         }
@@ -367,23 +367,294 @@ body {
             &:hover {
               background-color: #362F2D;
               cursor: pointer;
-                p {
-                  color: #B3A08A;
-                }
-                h3 {
-                  color: #fff;
-                }
+
+              p {
+                color: #B3A08A;
+              }
+
+              h3 {
+                color: #fff;
+              }
             }
           }
         }
       }
+
       .bottom-button {
-        width: 18%;
+        text-align: center;
         margin: 50px auto;
+
         .bigBtn {
           @include button;
         }
       }
+    }
+
+    .video {
+      width: 100%;
+      height: 500px;
+      position: relative;
+
+      .video-container {
+        width: 100%;
+        height: 500px;
+
+        img {
+          width: 100%;
+          height: inherit;
+        }
+      }
+
+      .video-bg {
+        @include defaultDisplay;
+        width: 100%;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(89, 89, 89, 0.5);
+
+        .circle {
+          @include defaultDisplay;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background: rgba(49, 49, 49, 0.5);
+          margin: 80px auto 0;
+
+          img {
+            width: 70%;
+            height: 70%;
+          }
+        }
+
+        .text-container {
+          width: 60%;
+          margin: 40px auto 0;
+          text-align: center;
+
+          h3 {
+            font-size: 30px;
+            color: #fff;
+          }
+
+          p {
+            font-size: 16px;
+            color: #fff;
+            width: 90%;
+            margin: 0 auto;
+          }
+
+          span {
+            color: #C7B299;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .mobdevice {
+      width: 100%;
+
+      .container {
+        margin: 90px auto 0;
+
+        .container-photo {
+          text-align: center;
+
+          img {
+            width: 100%;
+            height: inherit;
+          }
+        }
+
+        .container-description {
+          h2 {
+            margin: 60px 0 40px;
+            font-weight: 400;
+          }
+
+          p {
+            width: 85%;
+            margin: 0;
+            font-size: 16px;
+            color: #8C8C8C;
+          }
+
+          .mob-list {
+            margin: 30px 0 0 60px;
+            list-style-type: none;
+
+            .list-item {
+              font-size: 14px;
+              margin: 10px 0;
+              color: #8C8C8C;
+
+              img {
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .counters {
+      width: 100%;
+      background: linear-gradient(90deg, #1E1412, #553021);
+      padding: 35px 0;
+      font-family: 'Montserrat', sans-serif;
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+
+        .container-item {
+          @include defaultDisplay;
+          flex-direction: column;
+          margin: 10px 0;
+
+          h2 {
+            font-size: 48px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 10px 0 0;
+          }
+
+          span {
+            font-size: 14px;
+            color: #C7B299;
+            font-family: 'Montserrat', sans-serif;
+            margin: 10px 0 0;
+            text-transform: uppercase;
+          }
+
+          .block {
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+
+    .partners {
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+      .partners-image {
+        height: 300px;
+
+        img {
+          width: 100%;
+          height: inherit;
+        }
+      }
+
+      .partners-bg {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(89, 89, 89, 0.5);
+      }
+
+      .partners-logo {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .partners-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 60%;
+          height: 200px;
+          margin: 4% auto;
+
+          .partners-item {
+            @include defaultDisplay;
+            width: 16%;
+            height: 100px;
+            z-index: 99999;
+
+            img {
+              width: 100%;
+              height: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  footer {
+    width: 100%;
+
+    .footer-top {
+      background-color: #191919;
+      padding: 80px 0;
+
+      .row {
+        width: 80%;
+        margin: 0 auto;
+
+        div {
+          margin: 15px 0;
+
+          .footer-title {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+          }
+
+          p {
+            color: #555555;
+            font-size: 14px;
+            margin: 5px 0;
+            text-align: justify;
+            font-weight: bold;
+          }
+
+          span {
+            color: #363636;
+            font-size: 12px;
+          }
+        }
+
+        .container {
+          margin: 0;
+          padding: 0;
+          .row {
+            margin: 0;
+            .block {
+              width: 85px;
+              height: 85px;
+              margin: 5px;
+
+              img {
+                width: 100%;
+                height: inherit;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      @include defaultDisplay;
+      width: 100%;
+      height: 110px;
+      background-color: #111111;
     }
   }
 }
